@@ -1,10 +1,16 @@
-import React from "react";
 import styles from "../style";
 import { arrowUp } from "../assets";
-
+import { motion } from "framer-motion";
 const GetStarted = () => {
   return (
-    <div
+    <motion.div
+        style={{
+                    width: 150,
+                    height: 150,
+                    borderRadius: '50%',
+                    backgroundColor: "transparent",
+                }}
+                whileHover={{ scale: 0.8 }}
       className={`${styles.flexCenter} w-[140px] h-[140px] rounded-full bg-blue-gradient p-[2px] cursor-pointer `}
     >
       <div
@@ -24,7 +30,7 @@ const GetStarted = () => {
           <span className="text-gradient">Started</span>
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

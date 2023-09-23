@@ -1,6 +1,9 @@
-import React from "react";
+import { motion } from "framer-motion";
 import { stats } from "../constants";
 import styles from "../style";
+import { staggerContainer, zoomIn } from "../utils/motion";
+
+
 
 const Stats = () => {
   return (
@@ -8,7 +11,10 @@ const Stats = () => {
       className={`${styles.flexCenter} flex-row flex-wrap sm:mb-20 mb-6`}
     >
       {stats.map((stat) => (
-        <div
+        <motion.div
+        variants={zoomIn(0.1,.5)}
+        initial="hidden"
+        whileInView="show"
           key={stat.id}
           className={`flex-1 flex justify-start items-center flex-row m-3`}
         >
@@ -18,7 +24,7 @@ const Stats = () => {
           <p className="font-poppins font-normal xs:text-[20px] text-[15px] xs:leading-[26px] leading-[21px] text-gradient uppercase ml-3">
             {stat.title}
           </p>
-        </div>
+        </motion.div>
       ))}
     </section>
   );

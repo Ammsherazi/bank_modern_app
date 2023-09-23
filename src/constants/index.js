@@ -36,6 +36,7 @@ export const navLinks = [
 
 export const features = [
   {
+    index: 1,
     id: "feature-1",
     icon: star,
     title: "Rewards",
@@ -43,6 +44,7 @@ export const features = [
       "The best credit cards offer some tantalizing combinations of promotions and prizes",
   },
   {
+    index: 2,
     id: "feature-2",
     icon: shield,
     title: "100% Secured",
@@ -50,6 +52,7 @@ export const features = [
       "We take proactive steps make sure your information and transactions are secure.",
   },
   {
+    index: 3,
     id: "feature-3",
     icon: send,
     title: "Balance Transfer",
@@ -59,7 +62,7 @@ export const features = [
 ];
 
 export const feedback = [
-  {
+  { index: 1,
     id: "feedback-1",
     content:
       "Money is only a tool. It will take you wherever you wish, but it will not replace you as the driver.",
@@ -67,7 +70,7 @@ export const feedback = [
     title: "Founder & Leader",
     img: people01,
   },
-  {
+  {index: 2,
     id: "feedback-2",
     content:
       "Money makes your life easier. If you're lucky to have it, you're lucky.",
@@ -75,7 +78,7 @@ export const feedback = [
     title: "Founder & Leader",
     img: people02,
   },
-  {
+  {index: 3,
     id: "feedback-3",
     content:
       "It is usually people in the money business, finance, and international trade that are really rich.",
@@ -196,17 +199,21 @@ export const clients = [
   {
     id: "client-1",
     logo: airbnb,
+    index:1,
   },
   {
     id: "client-2",
     logo: binance,
+    index:2,
   },
   {
     id: "client-3",
     logo: coinbase,
+    index:3,
   },
   {
     id: "client-4",
     logo: dropbox,
+    index:4,
   },
 ];

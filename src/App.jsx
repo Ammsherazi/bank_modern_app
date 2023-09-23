@@ -1,5 +1,8 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import styles from "./style";
+import { motion } from "framer-motion";
+
 import {
   Navbar,
   Billing,

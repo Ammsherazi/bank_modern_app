@@ -1,8 +1,15 @@
-import React from "react";
-import { quotes } from "../assets";
 
-const FeedbackCard = ({ content, name, title, img }) => (
-  <div className="flex justify-between flex-col px-10 py-12 rounded-[20px] max-w-[370px] md:mr-10 sm:mr-5 mr-0 my-5 feedback-card">
+import { motion as m } from "framer-motion";
+import { quotes } from "../assets";
+import { zoomIn } from "../utils/motion";
+
+const FeedbackCard = ({ content, name, title, img, index }) => (
+  <m.div
+        variants={zoomIn(index*.25,.5)}
+        initial="hidden"
+        whileInView="show"
+
+ className="flex justify-between flex-col px-10 py-12 rounded-[20px] max-w-[370px] md:mr-10 sm:mr-5 mr-0 my-5 feedback-card">
     <img
       src={quotes}
       alt="double_quotes"
@@ -22,7 +29,7 @@ const FeedbackCard = ({ content, name, title, img }) => (
         </p>
       </div>
     </div>
-  </div>
+  </m.div>
 );
 
 export default FeedbackCard;
